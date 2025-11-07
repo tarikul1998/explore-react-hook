@@ -27,27 +27,9 @@ const router = createBrowserRouter([
         loader: () => fetch("https://jsonplaceholder.typicode.com/users"),
         element: <Users></Users>,
       },
-      // {
-      //   path: "/user/1",  // Fixed Routing
-      //   element: <UserDetails></UserDetails>,
-      // },
-      // {
-      //   path: "/user/:userId",
-      //   element: <UserDetails></UserDetails>,
-      // },
-      // {
-      //   path: "/user/:userId",
-      //   loader: () => fetch("https://jsonplaceholder.typicode.com/users/7"),
-      //   element: <UserDetails></UserDetails>,
-      // },
-      // {
-      //   path: "/user/:userId",
-      //   loader: ({ params} ) => console.log(params.userId),
-      //   element: <UserDetails></UserDetails>,
-      // },
       {
         path: "/user/:userId",
-        loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
+        loader: ({ params }) => fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
         element: <UserDetails></UserDetails>,
       },
     ],
