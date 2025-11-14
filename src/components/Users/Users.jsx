@@ -14,9 +14,7 @@ const Users = () => {
             <p>Fantastic and vodro users</p>
             <div className="user-container">
                 {
-                    users.map(user => <User 
-                        key={user.id}
-                        user={user}></User>)
+                    users.map(user => <User key={user.id} user={user}></User>)
                 }
             </div>
         </div>

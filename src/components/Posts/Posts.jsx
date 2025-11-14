@@ -1,21 +1,21 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom"
 import Post from "../Post/Post";
-import './Posts.css'
 
 const Posts = () => {
-
     const posts = useLoaderData();
+    console.log(posts);
 
     return (
-        <div>
-            <h2>Posts: {posts.length}</h2>
-            <div className="post-container">
-                {
-                    posts.map(post => <Post key={post.id} post={post}></Post>)
-                }
-            </div>
+    <div>
+        <h2>Posts: {posts.length}</h2>
+        <div className="user-container">
+            {
+                posts.map(post => <Post key={post.id} post={post}></Post>)
+            }
         </div>
-    );
-};
+    </div>
+  )
+}
 
-export default Posts;
+export default Posts
+    
